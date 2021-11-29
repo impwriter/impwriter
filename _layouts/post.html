@@ -2,53 +2,74 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <span class="meta">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
-            </span>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-6199">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
+        <div class="u-container-style u-expanded-width u-product u-shape-rectangle u-product-1">
+          <div class="u-container-layout u-valign-bottom-xs u-container-layout-1"><!--product_gallery--><!--options_json--><!--{"maxItems":""}--><!--/options_json-->
+            <div class="u-carousel u-gallery u-layout-thumbnails u-lightbox u-no-transition u-product-control u-show-text-none u-thumbnails-position-bottom u-gallery-1" data-interval="5000" data-u-ride="carousel" id="carousel-6016">
+              <div class="u-carousel-inner u-gallery-inner" role="listbox"><!--product_gallery_item-->
+                <div class="u-active u-carousel-item u-gallery-item">
+                  <div class="u-back-slide">
+                    <img class="u-back-image u-expanded" src="{{ page.image }}">
+                  </div>
+                  <div class="u-over-slide u-over-slide-1">
+                    <h3 class="u-gallery-heading">{{ page.title }}</h3>
+                    <p class="u-gallery-text">{{ page.description }}</p>
+                  </div>
+                </div><!--/product_gallery_item--><!--product_gallery_item-->
+                <div class="u-carousel-item u-gallery-item">
+                  <div class="u-back-slide">
+                    <img class="u-back-image u-expanded" src="{{ page.image2 }}">
+                  </div>
+                  <div class="u-over-slide u-over-slide-2">
+                    <h3 class="u-gallery-heading">{{ page.title }}</h3>
+                    <p class="u-gallery-text">{{ page.description }}</p>
+                  </div>
+                </div><!--/product_gallery_item-->
+              </div>
+              <a class="u-absolute-vcenter-xs u-carousel-control u-carousel-control-prev u-icon-circle u-opacity u-opacity-70 u-text-grey-60 u-text-hover-grey-75 u-carousel-control-1" href="#carousel-6016" role="button" data-u-slide="prev">
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                </span>
+                <span class="sr-only">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+		c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                </span>
+              </a>
+              <a class="u-absolute-vcenter-xs u-carousel-control u-carousel-control-next u-icon-circle u-opacity u-opacity-70 u-text-grey-60 u-text-hover-grey-75 u-carousel-control-2" href="#carousel-6016" role="button" data-u-slide="next">
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                </span>
+                <span class="sr-only">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+		c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                </span>
+              </a>
+              <ol class="u-carousel-thumbnails u-spacing-20 u-carousel-thumbnails-1"><!--product_gallery_thumbnail-->
+                <li class="u-active u-carousel-thumbnail u-carousel-thumbnail-1" data-u-target="#carousel-6016" data-u-slide-to="0">
+                  <img class="u-carousel-thumbnail-image u-image" src="{{ page.image }}">
+                </li><!--/product_gallery_thumbnail--><!--product_gallery_thumbnail-->
+                <li class="u-carousel-thumbnail u-carousel-thumbnail-2" data-u-target="#carousel-6016" data-u-slide-to="1">
+                  <img class="u-carousel-thumbnail-image u-image" src="{{ page.image2 }}">
+                </li><!--/product_gallery_thumbnail-->
+              </ol>
+            </div><!--/product_gallery--><!--product_title-->
+            <h2 class="u-product-control u-text u-text-1">
+              <a class="u-product-title-link" href="#"><!--product_title_content-->{{ page.title }}<!--/product_title_content--></a>
+            </h2><!--/product_title--><!--product_price-->
+            <div class="u-product-control u-product-price u-product-price-1">
+              <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+                <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;"><!--product_old_price_content-->{{ page.harga }}<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
+                <div class="u-price u-text-palette-2-base" style="font-size: 1.5rem; font-weight: 700;"><!--product_regular_price_content-->{{ page.harga }}<!--/product_regular_price_content--></div><!--/product_regular_price-->
+              </div>
+            </div><!--/product_price--><!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":""}--><!--/options_json-->
+            <a href="#" class="u-black u-btn u-button-style u-product-control u-btn-1"><!--product_button_content-->Shop Now<!--/product_button_content--></a><!--/product_button--><!--product_content-->
+            <div class="u-product-control u-product-desc u-text u-text-2"><!--product_content_content-->
+              <p>{{ page.description }}</p><!--/product_content_content-->
+            </div><!--/product_content-->
           </div>
-        </div>
+        </div><!--/product_item--><!--/product-->
       </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-        <hr>
-
-        <div class="clearfix">
-
-          {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
-          {% endif %}
-
-        </div>
-
-      </div>
-    </div>
-  </div>
+    </section>
