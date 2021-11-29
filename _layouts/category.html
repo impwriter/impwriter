@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+    <section class="u-clearfix u-white u-section-2">
+      <div class="u-border-4 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+      <div class="u-container-style u-group u-palette-5-light-3 u-group-1">
+        <div class="u-container-layout u-container-layout-1"></div>
+      </div>
+      <h2 class="u-text u-text-1">the best deals In this season</h2>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          {% for post in site.posts %}
+          {% if post contain page.category %}
+          <div class="u-align-left u-container-style u-list-item u-repeater-item" data-href="#">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <img src="{{ post.image }}" alt="{{ post.title }}" class="u-image u-image-default u-image-1">
+              <h5 class="u-text u-text-2">{{ post.title }}</h5>
+              <p class="u-text u-text-3">{{ post.category</p>
+              <h3 class="u-text u-text-4">{{ post.harga }}</h3>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <a href="https://nicepage.cloud" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">see all item</a>
+    </section>
