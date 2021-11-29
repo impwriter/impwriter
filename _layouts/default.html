@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-
-<html>
+<html style="font-size: 16px;">
 
 {% include head.html %}
 
-<body>
+<body data-home-page="Home.html" data-home-page-title="Home" class="u-body">
 
-  {% include navbar.html %}
+  {% include header.html %}
+
+  {% include carousel.html %}
 
   {{ content }}
 
   {% include footer.html %}
-
-  {% include scripts.html %}
 
   {% include google-analytics.html %}
 
