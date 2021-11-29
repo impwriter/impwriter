@@ -2,65 +2,51 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+    <section class="u-clearfix u-white u-section-2">
+      <div class="u-border-4 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+      <div class="u-container-style u-group u-palette-5-light-3 u-group-1">
+        <div class="u-container-layout u-container-layout-1"></div>
+      </div>
+      <h2 class="u-text u-text-1">the best deals In this season</h2>
+      <div class="u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          {% for post in site.posts %}
+          <div class="u-align-left u-container-style u-list-item u-repeater-item" data-href="#">
+            <div class="u-container-layout u-similar-container u-container-layout-2">
+              <img src="{{ post.image }}" alt="{{ post.title }}" class="u-image u-image-default u-image-1">
+              <h5 class="u-text u-text-2">{{ post.title }}</h5>
+              <p class="u-text u-text-3">{{ post.category</p>
+              <h3 class="u-text u-text-4">{{ post.harga }}</h3>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <a href="https://nicepage.cloud" class="u-border-2 u-border-black u-btn u-button-style u-hover-black u-none u-text-black u-text-hover-white u-btn-1">see all item</a>
+    </section>
+    
+    
+    <section class="u-align-center u-clearfix u-palette-3-light-3 u-section-3" id="carousel_ffab">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1">Available on</h2>
+        <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle u-container-layout-1">
+                  <img src="images/Tokopedia.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="1202" data-image-height="1453" data-href="#">
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <img src="images/shopee.png" alt="" class="u-expanded-width-md u-image u-image-contain u-image-default u-image-2" data-image-width="1440" data-image-height="2043" data-href="#" data-target="_blank">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
+    </section>
+    <style class="u-overlap-style">.u-overlap:not(.u-sticky-scroll) .u-header {
+background-color: #ffffff !important
+}</style>
