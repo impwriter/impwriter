@@ -12,9 +12,8 @@
     <--[ Style ]-->
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="Home.css" media="screen">
-    <link rel="stylesheet" href="Product-Detail.css" media="screen">
-    <link rel="stylesheet" href="Category.css" media="screen">
-
+    {% if page.product %}<link rel="stylesheet" href="Product-Detail.css" media="screen">{% endif %}
+    
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.0.3, nicepage.com">
